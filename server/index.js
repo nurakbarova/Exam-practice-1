@@ -31,7 +31,24 @@ app.get("/api", (req, res) => {
   res.send("Welcome APi");
 });
 
-
+//get All SECURITY
+app.get("/api/security", async (req, res) => {
+    const security = await SecurityModel.find();
+    res.status(200).send(security);
+  });
+  
+  
+//post
+app.post("/api/security", async (req, res) => {
+    const { name, imageURL } = req.body;
+    const newSecurity = new SecurityModel({
+      name: name,
+      imageURL: imageURL,
+    });
+    await newSecurity.save();
+    res.status(201).send("created");
+  });
+  
 
 PORT = process.env.PORT;
 app.listen(PORT, () => {
