@@ -33,22 +33,31 @@ app.get("/api", (req, res) => {
 
 //get All SECURITY
 app.get("/api/security", async (req, res) => {
-    const security = await SecurityModel.find();
-    res.status(200).send(security);
-  });
-  
-  
+  const security = await SecurityModel.find();
+  res.status(200).send(security);
+});
+
 //post
 app.post("/api/security", async (req, res) => {
-    const { name, imageURL } = req.body;
-    const newSecurity = new SecurityModel({
-      name: name,
-      imageURL: imageURL,
-    });
-    await newSecurity.save();
-    res.status(201).send("created");
+  const { name, imageURL } = req.body;
+  const newSecurity = new SecurityModel({
+    name: name,
+    imageURL: imageURL,
   });
-  
+  await newSecurity.save();
+  res.status(201).send("created");
+});
+
+//Delete security
+app.delete("/api/security/:id", async (req, res) => {
+  const { id } = req.params;
+  const security = await SecurityModel.findByIdAndDelete(id);
+  if (!security) {
+    res.status(204).send("security Not Found!");
+  } else {
+    res.status(200).send("security deleted!");
+  }
+});
 
 PORT = process.env.PORT;
 app.listen(PORT, () => {
