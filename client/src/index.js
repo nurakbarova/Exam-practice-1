@@ -4,6 +4,8 @@ import App from './App';
 import Navbar from './components/Navbar';
 import HomePages from './pages/HomePages';
 import OurServices from './pages/OurServices';
+import Some from './pages/Some';
+import Ourblog from './pages/Ourblog';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +14,8 @@ root.render(
     <Navbar/>
     <HomePages/>
     <OurServices/>
+    <Some/>
+    <Ourblog/>
   </>
 );
 
