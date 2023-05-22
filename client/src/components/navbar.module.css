@@ -1,0 +1,26 @@
+.nav_header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.652);
+}
+
+.nav_header_right ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_header_right li {
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+.nav_header_light {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}

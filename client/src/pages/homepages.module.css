@@ -1,0 +1,26 @@
+.home_text {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  width: 100vh;
+  margin: 0 auto;
+  padding-top: 20%;
+}
+
+.main {
+  background-image: url(https://preview.colorlib.com/theme/security/img/header-bg.jpg.webp);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.main_btn {
+  color: white;
+  border: rgb(250, 183, 0);
+  background-color: rgb(250, 183, 0);
+  line-height: 42px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
